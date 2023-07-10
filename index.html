@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylee.css">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <title>TGS6</title>
+</head>
+<body>
+    <div class="main">
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+
+        <div class="section">
+            <div class="section_form">
+                <div class="form">
+                    <h1>LOGIN FORM</h1>
+                    <section id="message-container">LOGIN BERHASIL.....</section>
+                    <section id="message-container2">Email atau Password salah!</section>
+                    <div class="input">
+                        <i class="fa-solid fa-envelope fa-2xl"></i>
+                        <input type="email" placeholder="email@address.com" id="email" required>
+                    </div>
+
+                    <div class="input">
+                        <i class="fa-solid fa-lock fa-2xl"></i>
+                        <input type="password" placeholder="password" id="password" required>
+                    </div>
+
+                    <div class="btn" onclick="login()">
+                        <input class="btn" type="submit" value="Login" id="login" >
+                    </div>
+
+                    
+                    <p class="forget">Forgot Password ?<a href="#">click here</a></p>
+                    <p class="forget">Don't have account ? <a href="#">click here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+   <script>
+            function login(){
+            let emailUser= 'jwd@gmail.com'
+            let passwordUser = '1234'
+            
+            
+            var email = document.querySelector('#email').value
+            var password= document.querySelector('#password').value;
+            var messageContainer=document.querySelector('#message-container').value
+            var messageContainer=document.querySelector('#message-container2').value
+            
+            if(email === emailUser && password === passwordUser){
+                document.getElementById('message-container').style.display='block'
+                document.getElementById('message-container2').style.display='none'
+                
+                location.replace('menu.html')
+
+            }else{
+                document.getElementById('message-container2').style.display='block'
+                document.getElementById('message-container').style.display='none'
+            }
+        }
+    </script>
+</body>
+</html>
